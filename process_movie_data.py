@@ -22,10 +22,10 @@ def find_top_10(filename):
     # Sort data and get top 10
     gross_sort = lambda x : x["Gross"]
     rows.sort(key=gross_sort)
-    top_five = rows[:-11:-1]
+    top_ten = rows[:-11:-1]
 
     # Print out results
-    for i, row in enumerate(top_five):
+    for i, row in enumerate(top_ten):
         print("{ind}. {row[Title]} ({row[Year]}) - ${row[Gross]:,d}".format(
             ind=i+1,
             row=row))
